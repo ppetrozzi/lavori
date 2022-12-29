@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xml_css.xsl"?>
+ <scuola>
+   <classe>
+    <utente>
+     		<nome>Antonio</nome>
+		<cognome>Banderas</cognome>
+    </utente>
+  </classe>
+ 
+  <classe>
+    <utente>
+     		<nome>Pino</nome>
+		<cognome>Corrias</cognome>
+    </utente>
+  </classe>
+
+ 
+  <classe>
+    <utente>
+     		<nome>Bernardo</nome>
+		<cognome>Bertolucci</cognome>
+    </utente>
+  </classe>
+ 
+  <classe>
+    <utente>
+     		<nome>mauro</nome>
+		<cognome>bianchi</cognome>
+    </utente>
+  </classe>
+ 
+  <classe>
+    <utente>
+     		<nome>luca</nome>
+		<cognome>sparascio</cognome>
+    </utente>
+  </classe>
+ </scuola>
