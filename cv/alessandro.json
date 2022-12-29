@@ -1,0 +1,23 @@
+
+{
+   "nome":"Alessandro",
+   "cognome":"Crippa",
+   "eta":18,
+   "telefono":"3755445360",
+   "email":"alessandro.crippa2004@gmail.com",
+   "indirizzo":"via cividale 23/A, Rho(MI)",
+   "data_nascita":"16/03/2004",
+   "nazionalita":"italiana",
+   "esperienza":
+      {
+         "titolo ":"tirocinante",
+         "tempo":"06/2022-06/2022",
+         "datore_lavoro":"Think out S.r.l.",
+         "mansioni":[
+            "problem solving e bug fixing",
+            "programmazione mobile tramite Android Studio",
+            "formazione Flutter(dart)"
+          ]
+      }
+
+}

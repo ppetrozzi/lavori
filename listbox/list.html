@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   
+  <body>
+   <form name="MyForm">
+   <select name=provincia multiple="multiple" style="height:100px">
+	<option value="RM">Roma</option>
+	<option value="NA">Napoli</option>
+	<option value="TO">Torino</option>
+	<option value="MI">Milano</option>
+	<option value="PV">Pavia</option>
+	<option value="VA">Varese</option>
+	<option value="CR">Cremona</option>
+	<option value="IS">Isernia</option>
+   </select>
+   <input type="button" onclick="seleziona()" value="premi">
+   </form>
+   <div id="scelta"></div>
+
+   <script>
+     function seleziona(){
+     var options = document.forms.MyForm.provincia.options;
+     var selectedOptions = [];
+     for (var i = 0; i < options.length; i++) {
+	if (options[i].selected) {
+		var x=options[i].value;
+		selectedOptions.push(x);
+            }
+	}
+     document.location.href="ricezione.html?prov="+selectedOptions;
+
+     }
+   </script>
+  </body>
+</html>

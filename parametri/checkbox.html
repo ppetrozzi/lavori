@@ -1,0 +1,25 @@
+<html>
+ <head>
+   <title>checkbox</title>
+ </head>
+ <body>
+  <input type="checkbox" id="box1" name="bici" value="bici" onclick="onClickHandler(document.getElementById('box1').value);">
+  <label for="vehicle1"> Ho una bici</label><br>
+  <input type="checkbox" id="box2" name="auto" value="auto" onclick="onClickHandler(document.getElementById('box2').value);">
+  <label for="vehicle2"> Ho un auto</label><br>
+  <input type="checkbox" id="box3" name="barca" value="barca" onclick="onClickHandler(document.getElementById('box3').value);">
+  <label for="vehicle3"> Ho una barca</label><br>
+
+
+ <script>
+  function onClickHandler(s){
+    var chk=s;
+    alert(chk);
+    //use this value
+
+  }
+ </script>
+
+  </body>
+
+</html>

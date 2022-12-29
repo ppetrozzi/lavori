@@ -1,0 +1,37 @@
+<html>
+<head>
+
+<script>
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success_callback, error_callback, { enableHighAccuracy: false });
+}else{
+  alert('La geo-localizzazione NON è possibile');
+}
+
+function success_callback(position) {
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
+
+alert(lat+"  "+lon);
+  document.getElementById('posizione').innerHTML = 'La tua posizione: ' + lat + ', ' + lon;  
+  var latlon=lat+","+lon;
+ 
+var img_url = '<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5597.589571534285!2d'+lon+'00000002!3d'+lat+'0000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sit!2sit!4v1553594193579" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>';
+   document.getElementById("mappa").innerHTML = img_url;
+}
+
+function error_callback(position) {
+  document.getElementById('posizione').innerHTML = "geolocalizzazione non disponibile";
+}
+
+</script>
+</head>
+<body>
+
+<h3 id="posizione"></h3>
+
+<p id="mappa"></p>
+
+
+</body>
+</html>

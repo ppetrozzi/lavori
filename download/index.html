@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>prova download</title>
+    <script>
+	function scrivi(){
+	let n = document.getElementById("nome").value
+	let n1 = "<div style='border:1px solid black; width:150px;'>"+n+"</div>";
+
+	let a = document.createElement('a');
+	a.href = "data:application/octet-stream,"+encodeURIComponent(n1);
+	a.download = 'anagrafica.html';
+	a.click();
+	}
+     </script>
+  </head>
+  <body>
+	<input type="text" value="nome" id="nome">
+	<input type="button" value="manda" onclick="scrivi()">
+		<br>
+		<span style="font-weigth:900"><a href="anagrafica.html">Vai ad anagrafica</a>
+  </body>
+</html>

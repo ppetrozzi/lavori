@@ -1,0 +1,21 @@
+<html>
+ <div style="width:30%; border:1px solid black; float:left;">
+     <span id="stampa1" style="width:50%; float:left;"></span>
+     <span id="stampa2" style="width:50%; float:left;"></span>
+     
+ </div>
+<script>
+    var url=document.location.search.substring(0); 
+    
+    var url1=url.split("&")[0];
+    var url2=url.split("&")[1];
+
+	var prov=url1.substr(6); 
+	var citta=url2.substr(4);
+	
+    document.getElementById("stampa1").innerHTML=prov;
+    document.getElementById("stampa2").innerHTML=citta
+</script>
+ 
+
+</html>

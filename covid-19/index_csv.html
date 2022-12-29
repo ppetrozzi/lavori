@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<canvas id="myCanvas" width="7000" height="1300"
+style="border:1px solid #d3d3d3;">
+Your browser does not support the canvas element.
+</canvas>
+<div id="demo"></div>
+
+<script>
+
+var date = new Array();
+var ti = new Array();
+var i=0;
+var j=23;
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "https://raw.githubusercontent.com/pcm-dpc/COVID-19/master/dati-andamento-nazionale/dpc-covid19-ita-andamento-nazionale.csv", true);
+xmlhttp.send();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+     var data = xmlhttp.responseText;
+     var rows = data.split(/\n/);
+
+ for (i=1; i<rows.length; i++){
+     var rowCells = rows[i].split(',');
+     let datag = rows[i].slice(8,10);
+     let datam = rows[i].slice(5,7);
+     let dataa = rows[i].slice(0,4);
+     date[i] = datag+"/"+datam+"/"+dataa;
+     ti[i] = rowCells[3]; 
+
+    }
+   disegna(date,ti);
+  }
+
+  }
+function disegna(grn,ter){
+
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d");
+ctx.beginPath();
+ctx.moveTo(30, 0);
+ctx.lineTo(30, 7000);
+ctx.moveTo(0, 1270);
+ctx.lineTo(7000, 1270);
+ctx.moveTo(30, 1270);
+
+for (x=0;x<=grn.length;x++){
+
+   ctx.lineTo(10*(30+x),1270-(0.312*ter[x]));
+
+}
+ctx.stroke();
+
+}
+
+</script>
+
+</body>
+</html>

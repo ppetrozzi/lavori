@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script language="VBScript">
+
+
+function creaTabellaMese1(Dove)
+Dim Data, MatGiorni(6,7), Inizio, Mese
+
+Inizio=3
+Data = "01/02/2005"   ' Assegna una data.
+Mese = mesi(Month(data)-1)
+' 
+
+MatGiorni(0,0)=00
+MatGiorni(0,1)=00
+MatGiorni(0,2)=00
+MatGiorni(0,3)=01
+MatGiorni(0,4)=02
+MatGiorni(0,5)=03
+MatGiorni(0,6)=04
+
+MatGiorni(1,0)=05
+MatGiorni(1,1)=06
+MatGiorni(1,2)=07
+MatGiorni(1,3)=08
+MatGiorni(1,4)=09
+MatGiorni(1,5)=10
+MatGiorni(1,6)=11
+
+MatGiorni(2,0)=12
+MatGiorni(2,1)=13
+MatGiorni(2,2)=14
+MatGiorni(2,3)=15
+MatGiorni(2,4)=16
+MatGiorni(2,5)=17
+MatGiorni(2,6)=18
+
+MatGiorni(3,0)=19
+MatGiorni(3,1)=20
+MatGiorni(3,2)=21
+MatGiorni(3,3)=22
+MatGiorni(3,4)=23
+MatGiorni(3,5)=24
+MatGiorni(3,6)=25
+
+MatGiorni(4,0)=26
+MatGiorni(4,1)=27
+MatGiorni(4,2)=28
+MatGiorni(4,3)=29
+MatGiorni(4,4)=30
+MatGiorni(4,5)=31
+MatGiorni(4,6)=00
+
+MatGiorni(5,0)=00
+MatGiorni(5,1)=00
+MatGiorni(5,2)=00
+MatGiorni(5,3)=00
+MatGiorni(5,4)=00
+MatGiorni(5,5)=00
+MatGiorni(5,6)=00
+
+Set Contenitore=document.getElementById(Dove)
+
+Set Tabella=document.createElement("Table")
+'Tabella.border="1"
+'Tabella.bgColor="yellow"
+Tabella.id="IDTabella"
+Tabella.borderColor="red"
+Tabella.cellSpacing="5"
+Tabella.cellPadding="5"
+Tabella.width="5%"
+Tabella.align="left"
+Tabella.bgColor="lightgreen"
+Tabella.border="5%"
+Tabella.style.width="20%"
+Tabella.borderColorDark="darkgreen"
+Tabella.borderColorLight="greenyellow"
+'Tabella.events="onmouseover=crea()"
+'msgbox "A"
+'exit function
+set intestazione = document.createElement("caption") 
+intestazione.style.backgroundColor="turquoise"
+set testo=document.createTextNode(Mese)
+intestazione.appendChild(testo)
+ 
+set tCorpo = document.createElement("tbody") 
+
+' Elenca drivers in una tabella 
+    For R= 0 to 5
+		set riga = document.createElement("TR") 
+		for C = 0 to 6	
+			set Col = document.createElement("TD") 
+			set testo=document.createTextNode(matGiorni(r,c))
+			Col.appendChild(testo)
+			Riga.appendChild(Col)
+		next 
+		tCorpo.appendChild(Riga) 
+    Next
+Tabella.appendChild(tCorpo) 
+Tabella.appendChild(intestazione) 
+contenitore.appendChild(Tabella)
+end function
+
+Dim Mesi
+Mesi = Array("Gennaio", "Febbraio", "Marzo", "Aprile", "Maggio", "Giugno", "Luglio", "Agosto", "Settembre", "Ottobre", "Novembre", "Dicembre")
+FineMesi = Array(31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30,31)
+Riga0 = Array("Lun", "Mar", "Mer", "Gio", "Ven", "Sab", "Dom")
+
+function creaTabellaMese2(Dove)
+Dim Data, MatGiorni(6,7), Inizio, Mese
+data=inputbox("Inserire una data:" , "Compito", Date())
+Mese = mesi(Month(data)-1)
+GiornoSettimana = Weekday(data, vbMonday)
+msgbox giornosettimana
+' 
+'Crea matrice giorni
+ContaGG=0
+for r = 0 to 5
+	if contagg >= finemesi(Month(data)-1) then exit for
+	for C = 0 to 6
+		if c < GiornoSettimana-1 and r =0 or contagg >= finemesi(Month(data)-1) then
+			MatGiorni(r,c)=0
+		else
+			ContaGG=ContaGG+1
+			MatGiorni(r,c)=ContaGG
+		end if
+	next
+
+next
+
+Set Contenitore=document.getElementById(Dove)
+
+Set Tabella=document.createElement("Table")
+'Tabella.border="1"
+'Tabella.bgColor="yellow"
+Tabella.id="IDTabella"
+Tabella.borderColor="red"
+Tabella.cellSpacing="5"
+Tabella.cellPadding="5"
+Tabella.width="5%"
+Tabella.align="left"
+Tabella.bgColor="lightgreen"
+Tabella.border="5%"
+Tabella.style.width="20%"
+Tabella.borderColorDark="darkgreen"
+Tabella.borderColorLight="greenyellow"
+
+set intestazione = document.createElement("caption") 
+intestazione.style.backgroundColor="lightgreen"
+set testo=document.createTextNode(Mese)
+intestazione.appendChild(testo)
+ 
+set tCorpo = document.createElement("tbody") 
+
+set riga = document.createElement("TR") 
+for c = 0 to 6
+	set Col = document.createElement("TD") 
+	set testo=document.createTextNode(Riga0(c))
+	Col.appendChild(testo)
+	Riga.appendChild(Col)
+next	
+tCorpo.appendChild(Riga) 
+
+'  
+    For R= 0 to 5
+		set riga = document.createElement("TR") 
+		for C = 0 to 6
+			set Col = document.createElement("TD") 
+			set testo=document.createTextNode(matGiorni(r,c))
+			Col.appendChild(testo)
+			Riga.appendChild(Col)
+		next 
+		tCorpo.appendChild(Riga)
+		
+	'	msgbox matgiorni(r,c-1) & vblf & r & "-" & c-1
+		if matgiorni(r,c-1) = 0 then
+			exit for 
+		end if 
+    Next
+Tabella.appendChild(tCorpo) 
+Tabella.appendChild(intestazione) 
+contenitore.appendChild(Tabella)
+end function
+</script>
+</HEAD>
+<body id="Corpo" onload="creaTabellaMese2('Corpo')" >
+
+
+</BODY>
+</HTML>

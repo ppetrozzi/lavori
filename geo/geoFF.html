@@ -1,0 +1,41 @@
+<html>
+<head>        
+<!-- Leaflet CSS -->      <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.1/leaflet.css" />
+
+<style>
+  #map {        
+	height: 580px;  
+	}      
+</style>
+
+</head>  
+<body>
+ <div id="map"></div>   
+
+<!-- Leaflet JS -->  <script src="leaflet.js"></script>   
+
+<script type="text/javascript">  
+
+navigator.geolocation.getCurrentPosition(success_callback, error_callback, { enableHighAccuracy: false });
+
+function success_callback(position) {
+  var lat = position.coords.latitude;
+  var lon = position.coords.longitude;
+
+var map = L.map('map').setView([lat, lon], 13); 
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {      
+		attribution: '© <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',      maxZoom: 20      
+	}).addTo(map); 
+
+
+}
+
+function error_callback(position) {
+  document.getElementById('posizione').innerHTML = "geolocalizzazione non disponibile";
+}
+      
+	 
+</script>   
+   
+</body>    
+</html>

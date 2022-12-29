@@ -1,0 +1,25 @@
+<html>
+ <head>
+  <title>Controllo Radio button Javascript</title>
+  <script type="text/javascript">
+   function controlla() {
+       
+        for(i=0;i<document.theform.colori.length;i++) {
+          if(document.theform.colori[i].checked){
+             document.location.href="radio.html?col="+document.theform.colori[i].value;
+          }
+        }
+    }
+   </script>
+ </head>
+ <body>
+    <div style="margin-left:100px;">
+    <form method="get" action="/" name="theform">
+        <input type="radio" name="colori" value="rosso" />Rosso<br />
+        <input type="radio" name="colori" value="verde" />Verde<br />
+        <input type="radio" name="colori" value="bianco" />Bianco<br />
+        <input type="button" onclick="controlla();" value="Invia">
+    </form>
+    </div>
+  </body>
+ </html>

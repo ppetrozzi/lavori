@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <div style="margin-left:100px:">
+	<div id="div0" style="position: absolute; top: 0px; left: 100px;">
+        <select id="prov" onchange="Validate()">
+            <option value="0">Select</option>
+            <option value="1">Milano</option>
+            <option value="2">Pavia</option>
+        </select>
+	</div>
+ 	<div id="div1" style="visibility: hidden; position: absolute; left: 100px; top: 20px;">
+	<select id="comMI" onchange="scelta_MI()">
+	        <option value="0">Select</option>
+            <option value="1">Rho</option>
+            <option value="2">Lainate</option>
+            <option value="3">Parabiago</option>
+        </select>
+	</div>
+	<div id="div2" style="visibility: hidden; position: absolute; left: 100px; top: 20px;">  
+	<select id="comPV" onchange="scelta_PV()">
+	        <option value="0">Select</option>
+            <option value="1">Vigevano</option>
+            <option value="2">Zavattarello</option>
+            <option value="3">Godiasco</option>
+        </select>
+	</div> 
+	</div>
+       
+
+        <script type="text/javascript">
+            function Validate()
+            {
+                let e = document.getElementById("prov");
+                let provincia = e.options[e.selectedIndex].value;
+
+                if(provincia==0)
+                {
+                    
+		    document.getElementById("div1").style.visibility = "hidden";
+		    document.getElementById("div2").style.visibility = "hidden";
+		   
+                }
+		else if (provincia==1)
+		{
+		   
+		    document.getElementById("div1").style.visibility = "visible";
+		    document.getElementById("div2").style.visibility = "hidden";
+	    
+		}
+		else if (provincia==2)
+		{
+		    document.getElementById("div1").style.visibility = "hidden";
+		    document.getElementById("div2").style.visibility = "visible";
+
+		}
+            }
+
+            function scelta_MI()
+            {
+		        let e = document.getElementById("prov");
+                let prov = e.options[e.selectedIndex].text;
+		        let f = document.getElementById("comMI");
+                let citta = f.options[f.selectedIndex].text;
+                sped(prov,citta);
+             }
+	  
+            function scelta_PV()
+            {
+                let e = document.getElementById("prov");
+                let prov = e.options[e.selectedIndex].text;
+		        let f = document.getElementById("comPV");
+                var citta = f.options[f.selectedIndex].text;
+                sped(prov,citta);
+            }
+    
+	    function sped(x,y)
+	    {	    
+            var x1=x, y1=y;
+            document.location.href="stampa_prov.html?prov="+x+"&cit="+y;
+	    }
+
+
+        </script>
+    </body>
+</html>

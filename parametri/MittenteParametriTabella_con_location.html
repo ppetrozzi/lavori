@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h2> Passaggio di parametri facendo uso del method get </h2>
+  <h3> Inserire dati solo min 10 </h3>
+  
+      righe: <input type="number" id="txtR"> <br>
+      colonne: <input type="number" id="txtC"> <br>
+      <a href="#" onclick="vai()">vai a</a>
+      <p id="ris"></p>
+
+
+
+<script>
+function vai() {
+  var a = document.getElementById('txtR').value;
+  var b = document.getElementById('txtC').value;
+  //document.getElementById('ris').innerHTML=a;
+  location.href="destinatarioCreaTabella.html?txtR="+a+"&txtC="+b;
+}
+</script>
+
+</body>
+</html>
+

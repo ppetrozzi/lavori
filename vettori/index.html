@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script>
+            function plus(numb) {
+                var number=[];
+                number.push(numb);
+                var text ="";
+                for(i=0;i<number.length;i++){
+                    var cont = document.createElement("div");
+                    var testo = document.createTextNode(number[i])
+                    cont.appendChild(testo);
+                    document.getElementById("numeri").appendChild(cont);
+                    
+                }               
+                
+            }
+        </script>
+    </head>
+    <body>
+        
+        <input type="number" id="num">
+        <input type="button" value="+" onclick="plus(document.getElementById('num').value)">
+        <div id="numeri"></div>
+
+    </body>
+</html>

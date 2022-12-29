@@ -1,0 +1,7 @@
+<html>
+    <script>
+        fetch("https://petrozzi.000webhostapp.com/cv/sandro.json")
+            .then(response => response.json())
+            .then(json => document.write(json.nome));
+    </script>
+</html>

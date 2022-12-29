@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+<script>
+var x=0;
+var stampa="";
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.open("GET", "prova.json", true);
+xmlhttp.send();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    stampa += "<h1>" + myObj.nome + "</h1><br>"
+     for (x in myObj.auto) {
+     stampa +="<h3>" + myObj.auto[x].tipo + ": " + myObj.auto[x].nome + "</h3>";
+  }
+    document.getElementById("demo").innerHTML = stampa;
+  }
+};
+
+</script>
+
+
+</body>
+</html>

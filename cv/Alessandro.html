@@ -1,0 +1,32 @@
+<html>
+    <head>
+    <script>
+
+	var stri = new Array();
+        var xmlhttp = new XMLHttpRequest();
+	var x = 0;
+        var stampa="";                   
+        xmlhttp.open("GET", "https://petrozzi.000webhostapp.com/cv/alessandro.json", true);
+        xmlhttp.send();
+
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var myObj = JSON.parse(this.responseText);
+		stampa += "<h1>" + myObj.cognome + "</h1><br>";
+                      for (x in myObj.esperienza.mansioni) {
+     			stampa +="<h3>" + myObj.esperienza.mansioni[x] + "</h3>";
+  			}
+		document.getElementById("nome").innerHTML = stampa;
+           }
+        }
+
+            
+    </script>
+    </head>
+    
+    <body>
+    	<p id="nome"></p>
+    	<a href="#" onclick="history.go(-1)">torna</a>
+    </body>
+                    
+</html>

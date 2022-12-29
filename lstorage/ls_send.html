@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+ 
+<body >
+ <!--<header style="background-color: coral;  height:250px;">
+   <img src="casa.jpg" style="float:left;"><h1 style="float:right;margin-top:100px;" id="stampa">itis cannizzaro</h1>
+ </header>
+-->
+<input type="text" width="150" id="last_Name">
+<input type="text" width="150" id="first_Name">
+
+<script>
+function ls() {
+
+var na = document.getElementById("last_Name").value;
+var la = document.getElementById("first_Name").value;
+
+
+if (typeof(Storage) !== "undefined") {
+  
+  localStorage.setItem("cognome", na);
+  localStorage.setItem("nome", la);
+
+} else {
+
+  document.getElementById("stampa").innerHTML = "Il browser non supporta lo storage";
+}
+  document.location.href="ls_try.html";
+}
+</script>
+
+<input type="Button" value="premi" onclick="ls()">
+
+</body>
+</html>

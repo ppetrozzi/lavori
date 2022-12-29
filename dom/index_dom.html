@@ -1,0 +1,47 @@
+
+<!DOCTYPE>
+<html>
+<head>
+   <title>DOM</title>
+</head>
+
+<Body>
+  <input type="text" width="30" id="ins1"><br>
+  <input type="text" width="30" id="ins2"><br>
+  <input type="text" width="30" id="ins3"><br>
+  <button onclick="aggiungi()">Aggiungi paragrafo</button>
+  <div id="testo"></div>
+  <div id="testo1"></div>
+  <div id="testo2"></div>
+  
+
+<script>
+function aggiungi() {
+  var cont = document.createElement("div");
+  var cont1 = document.createElement("div");
+  var cont2 = document.createElement("div");
+
+  var text = document.createTextNode(document.getElementById('ins1').value);
+  var text1 = document.createTextNode(document.getElementById('ins2').value);
+  var text2 = document.createTextNode(document.getElementById('ins3').value);
+
+  cont.appendChild(text);
+  cont1.appendChild(text1);
+  cont2.appendChild(text2);
+  
+  document.getElementById("testo").style.backgroundColor = "green";
+  document.getElementById("testo").style.border = "1px solid black";
+  document.getElementById("testo1").style.backgroundColor = "red";
+  document.getElementById("testo2").style.backgroundColor = "blue";
+  
+  document.getElementById("testo").appendChild(cont);
+  document.getElementById("testo1").appendChild(cont1);
+  document.getElementById("testo2").appendChild(cont2);
+  
+
+}
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<html>
+<body>
+
+<p id="prova"></p>
+
+<script>
+var miElenco = '{"nome":"Andrea", "età":22, "città":"Codogno"}';
+var miOggetto = JSON.parse(miElenco);
+document.getElementById("prova").innerHTML = miOggetto.nome;
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Esempio di creazione dinamica di una tabella con lettura n/°righe n/°colonne trasmesse da un mittente</title>
+    
+</head>
+<body>
+    <h2><b> Esempio di creazione dinamica di una tabella con lettura n°righe n°colonne trasmesse da un mittente</b></h2>
+
+     <table id="tabella1" border=1>
+     </table>
+
+	<script>
+
+      	s = "";
+        var url=document.location.search.substring(0); 
+alert(url);
+        var url1=url.split("&")[0];
+        var url2=url.split("&")[1];
+alert(url1+"  "+url2);
+	var r=url1.substr(6); 
+	var c=url2.substr(5);
+	
+
+	for (i= 1; i<=r; i++)
+  	{
+    	s=s+"<tr>";
+    		for (j=1; j<=c; j++)
+      		{ ris = Math.round(Math.random() * 100);
+		      s=  s +"<td>" + ris + "</td>"; 
+		}
+    	s=s+"</tr>";
+//alert(s);
+  	}  
+  
+	document.getElementById("tabella1").innerHTML  =   s  ;  // inserimento nella 1^ tabella della stringa rappresentante il codice HTML
+
+	</script>
+</body>
+</html>
+

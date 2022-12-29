@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+ <head>
+  <title>Popolare list box</title>
+
+  <script>
+   function aggli() {
+
+    persone = document.getElementById('nomi').value;
+    if (persone != '') {
+        selezione.add(new Option(persone));
+        document.getElementById('nomi').value='';
+    } else {
+        alert('Non hai inserito nessun valore.');
+    }
+   }
+  </script>
+
+ </head>
+ <body>
+
+  <h2>Inserimento dinamico Listbox</h2>
+  <input type="text" id="nomi" />
+  <input type="button" id="btn_aggiungi" value="aggiungi alla lista" onclick="aggli()">
+  <select id="selezione"></select>
+
+</body>
+</html>

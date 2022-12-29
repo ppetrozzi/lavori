@@ -1,0 +1,108 @@
+[
+{
+   "nome":"Alessandro",
+   "cognome":"Crippa",
+   "eta":18,
+   "telefono":"3755445360",
+   "email":"alessandro.crippa2004@gmail.com",
+   "indirizzo":"via cividale 23/A, Rho(MI)",
+   "data_nascita":"16/03/2004",
+   "nazionalita":"italiana",
+   "esperienza":[
+      {
+         "titolo ":"tirocinante",
+         "tempo":"06/2022-06/2022",
+         "datore_lavoro":"Think out S.r.l.",
+         "mansioni":[
+            "problem solving e bug fixing",
+            "programmazione mobile tramite Android Studio",
+            "formazione Flutter(dart)"
+         ]
+      },
+      {
+         "titolo ":"addetto accessi manifestazione sportiva",
+         "tempo":"03/2022-04/2022",
+         "datore_lavoro":"CSI",
+         "mansioni":[
+            "controllo del rispetto delle norme obbligatorie",
+            "accoglienza degli spettatori"
+         ]
+      }
+   ],
+   "formazione":{
+      "titolo_studio":"diploma perito informatico",
+      "anno_diploma":"in corso",
+      "istututo":"ITIS S. Cannizzaro",
+      "citta":"Rho(MI)"
+   },
+   "competenze":[
+      "conoscenze di base pacchetto Office",
+      "conoscenze di base Flutter(dart)",
+      "conoscenze avanzate Java"
+	  ]
+   ,
+   "lingue":[
+      {
+         "lingua":"italiano",
+         "livello":"madrelingua"
+      },
+      {
+         "lingua":"inglese",
+         "livello":"C1"
+      }
+   ]
+},
+{
+   "nome":"Stefano",
+   "cognome":"Sandri",
+   "eta":18,
+   "telefono":"3755445360",
+   "email":"alessandro.crippa2004@gmail.com",
+   "indirizzo":"via cividale 23/A, Rho(MI)",
+   "data_nascita":"16/03/2004",
+   "nazionalita":"italiana",
+   "esperienza":[
+      {
+         "titolo ":"tirocinante",
+         "tempo":"06/2022-06/2022",
+         "datore_lavoro":"Think out S.r.l.",
+         "mansioni":[
+            "problem solving e bug fixing",
+            "programmazione mobile tramite Android Studio",
+            "formazione Flutter(dart)"
+         ]
+      },
+      {
+         "titolo ":"addetto accessi manifestazione sportiva",
+         "tempo":"03/2022-04/2022",
+         "datore_lavoro":"CSI",
+         "mansioni":[
+            "controllo del rispetto delle norme obbligatorie",
+            "accoglienza degli spettatori"
+         ]
+      }
+   ],
+   "formazione":{
+      "titolo_studio":"diploma perito informatico",
+      "anno_diploma":"in corso",
+      "istututo":"ITIS S. Cannizzaro",
+      "citta":"Rho(MI)"
+   },
+   "competenze":[
+      "conoscenze di base pacchetto Office",
+      "conoscenze di base Flutter(dart)",
+      "conoscenze avanzate Java"
+	  ]
+   ,
+   "lingue":[
+      {
+         "lingua":"italiano",
+         "livello":"madrelingua"
+      },
+      {
+         "lingua":"inglese",
+         "livello":"C1"
+      }
+   ]
+}
+]
