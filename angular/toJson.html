@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		AngularJS toJSON() function
+	</title>
+	<script src=
+"https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular.js">
+	</script>
+	<style>
+		body {
+			font-family: "Arial";
+			text-align: center;
+			line-height: 30px;
+		}
+
+		h1 {
+			color: green;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>GeeksforGeeks</h1>
+	<h3>angular.toJson() function</h3>
+	<fieldset>
+		<legend>Company Details</legend>
+	
+		<script>
+			var company = {
+				'Name': 'GeeksforGeeks',
+				'Location': 'Noida'
+			}
+			var Industry = {
+				'Type': 'Software',
+				'Domain': 'Content & Course'
+			}
+			document.write(angular.toJson(company)
+				+ "</br>"
+				+ angular.toJson(Industry));
+		</script>
+	</fieldset>
+</body>
+
+</html>
