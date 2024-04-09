@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <meta charset="utf-8" name="author" content="Lorenzo Balsamà">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Lavori a gruppi 4Bi</title>
+ 
+    <style>
+      a {
+        color:#000000;
+        text-shadow: 2px 2px #ff0000;
+      
+      }
+      a:hover {
+        color:#093605;
+        font-weight:bold;
+        text-shadow: 2px 2px #b08258;
+        transition: background 1s;
+      }
+    </style>
+     
+  </head>
+  <body>
+
+  <H1 align="center"> <a href="#arrivo" name="partenza">Classe 4B informatica</a> </H1>
+
+  <!--   <form action="/action_page.php">
+	  <label for="fname">First name:</label><br>
+	  <input type="text" id="fname" name="fname"><br>
+	  <label for="lname">Last name:</label><br>
+	  <input type="text" id="lname" name="lname"><br><br>
+	  <input type="submit" value="Submit">
+	</form> -->
+    <table height="100%" width="100%">
+	 
+	   
+     <tr>
+	  <td width="30%">
+       <ul style="list-style-type:none;">
+         <li><a href="Basilico_Fratoni/" target="content1"><H3>Basilico-Fratoni</H3></a></li> 
+		 <li><a href="Brivio_marco/" target="content1"><H3>Brivio</H3></a></li>
+		 <li><a href="Meloni_Bertoncello/" target="content1"><H3>Meloni-Bertoncello</H3></a></li>
+		 <li><a href="Meruzzi_Riccio/" target="content1"><H3>Meruzzi-Riccio</H3></a></li>
+		 <li><a href="Orlandi_Buttiglieri/" target="content1"><H3>Orlandi-Buttiglieri</H3></a></li>
+		 <li><a href="Ottolina_Novia/" target="content1"><H3>Ottolina-Novia</H3></a></li>
+		 <li><a href="Pirro_Pravettoni/" target="content1"><H3>Pirro'-Pravettoni</H3></a></li>
+		 <li><a href="Bulloni_Geraci/" target="content1"><H3>Bulloni-Geraci</H3></a></li>
+		 <li><a href="balsama_procopio/" target="content1"><H3>Balsama'-Procopio</H3></a></li>
+		 <li><a href="lofaro_lollino" target="content1"><H3>Lo Faro-Lollino</H3></li>
+		 <li><a href="zennaro-badolato/" target="content1"><H3>Zennaro-Badolato</H3></a></li>
+		</ul>
+		</td>
+		<td height="100%" width="70%">
+		<iframe name="content1" height="100%" width="100%"></iframe>
+		</td>
+     </tr>
+    </table>
+<div style="height:700px;border:1px solid black;margin-bottom:1px;"><a href="#partenza" name="arrivo">sono arrivato</a>
+<h1>qwdgusfhjpoa09s8fduifdh</h1>
+
+
+</div>
+  </body>
+</html>

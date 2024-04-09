@@ -1,0 +1,23 @@
+<html>
+    <script>
+        
+        fetch("http://petrozzi.000webhostapp.com/cv/sandro.json")
+            .then(response => response.json())
+            .then(json => estrai(json));
+        
+        function estrai(json) {
+           var espe = "";
+           for (i in json.esperienza.mansioni) { 
+               espe+="<h3>" + json.esperienza.mansioni[i] + "</h3>"; 
+            }           
+            document.getElementById("stampa").innerHTML=espe;
+        }
+        
+        
+            
+    </script>
+    
+    <body>
+        <p id="stampa"></p>
+    </body>
+</html>

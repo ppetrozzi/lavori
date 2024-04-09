@@ -1,0 +1,9 @@
+{
+"nome":"Paolo",
+"eta":25,
+"auto":[
+{ "tipo":"sw", "nome":"volvo" },
+{ "tipo":"spider", "nome":"jaguar" },
+{ "tipo":"van", "nome":"ford" }
+]
+}

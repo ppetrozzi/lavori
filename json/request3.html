@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function primo(file){
+jsF=file+".json";
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.nome + " " + myObj.auto[0].tipo;
+  }
+};
+xmlhttp.open("GET", jsF, true);
+xmlhttp.send();
+}
+
+</script>
+</head>
+
+<body>
+
+<h2>Uso di XMLHttpRequest per ottenere con il metodo get il contenuto di un file.</h2>
+<input type="button" value="primo file" onclick="primo('prova')">
+<input type="button" value="secondo file" onclick="primo('prova2')">
+<p id="demo"></p>
+
+
+
+
+</body>
+</html>

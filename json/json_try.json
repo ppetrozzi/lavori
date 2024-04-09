@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store and retrieve data from local storage.</h2>
+
+<p id="demo"></p>
+
+<script>
+var miElenco, miOggetto, testo, oggetto;
+
+miElenco = {"nome":"Andrea", "età":22, "città":"Codogno", "data_nascita":"22/02/2020"};
+miOggetto = JSON.stringify(miElenco);
+localStorage.setItem("provaJSON", miOggetto);
+
+// Retrieving data:
+testo = localStorage.getItem("provaJSON");
+oggetto = JSON.parse(testo);
+document.getElementById("demo").innerHTML = oggetto.nome + " " + oggetto.età + " " + oggetto.data_nascita;
+</script>
+
+</body>
+</html>
