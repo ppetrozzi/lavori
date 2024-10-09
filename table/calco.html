@@ -5,6 +5,7 @@
 <input type="text" id="primo">
 <input type="text" id="secondo">
 <button onclick="somma()">Somma</button>
+<input type="text" id="terzo">
 
 
 <p id="demo"></p>
@@ -13,7 +14,7 @@
 function somma() {
 	let x = parseInt(document.getElementById("primo").value);
 	let y = parseInt(document.getElementById("secondo").value);
-	document.getElementById("demo").innerHTML = x + y;
+	document.getElementById("terzo").value = x + y;
 }
 </script>
 
