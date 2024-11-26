@@ -44,7 +44,7 @@
     <service name = "Hello_Service">
         <documentation>Server</documentation>
         <port binding = "tns:Hello_Binding" name = "Hello_Port">
-            <soap:address location = "http://petrozzi.000webhostapp.com/soap/server/" />
+            <soap:address location = "https://raw.githubusercontent.com/ppetrozzi/lavori/7bd881aacef33b2f3c4e6c7eab73125bd3276d93/soap/server/test.wsdl" />
         </port>
     </service>
 </definitions>
