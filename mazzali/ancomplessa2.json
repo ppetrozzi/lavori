@@ -1,0 +1,35 @@
+
+[
+    {
+        "id":"01",
+        "nome":"marco",
+        "cognome":"rossi",
+        "indirizzo":"marco.rossi@gmail.com",
+        "eta":"17",
+        "telefono":[
+            {"casa":"8329343212"},{"ufficio":"3929432139"},{"mobile":"1923239475"}
+        ],
+        "img":"https://mir-s3-cdn-cf.behance.net/project_modules/1400/35af6a41332353.57a1ce913e889.jpg"
+    },
+    {   "id":"02",
+        "nome":"barbara",
+        "cognome":"vetri",
+        "indirizzo":"barbara.vetri78@libero.it",
+        "eta":"33",
+        "telefono":[
+            {"casa":"29394302345"},{"ufficio":"3334839321"},{"mobile":"3849321234"}
+        ],
+        "img":"https://img.freepik.com/foto-gratuito/close-up-donna-sorridente-in-posa_23-2149178089.jpg"
+    },
+     {  "id":"03",
+        "nome":"anna",
+        "cognome":"pepe",
+        "indirizzo":"annapepe333@gmail.com",
+        "eta":"59",
+        "telefono":[
+            {"casa":"3940321234"},{"ufficio":"3334859432"},{"mobile":"4839213456"}
+        ],
+        "img":"https://img.freepik.com/foto-gratuito/il-ritratto-della-giovane-donna-con-emozioni-pensierose_155003-11484.jpg?semt=ais_hybrid"
+        
+     }
+]

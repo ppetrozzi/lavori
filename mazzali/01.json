@@ -1,0 +1,14 @@
+
+[
+    {
+        "id":"01",
+        "nome":"marco",
+        "cognome":"rossi",
+        "indirizzo":"marco.rossi@gmail.com",
+        "eta":"17",
+        "telefono":[
+            {"casa":"8329343212"},{"ufficio":"3929432139"},{"mobile":"1923239475"}
+        ],
+        "img":"https://mir-s3-cdn-cf.behance.net/project_modules/1400/35af6a41332353.57a1ce913e889.jpg"
+    }
+]

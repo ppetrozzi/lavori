@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Curriculum vitae</title>
+        <script>
+            let id = location.search 
+            id = id.split("=")[1]; 
+            console.log(id);
+            xr = new XMLHttpRequest();
+            xr.onreadystatechange = function(){
+            if(this.readyState == 4 && this.status == 200){
+                var myObj = JSON.parse(this.responseText);
+                let content = document.createElement("div");
+                let im = document.createElement("img");
+                im.setAttribute("src", myObj[0]["img"]);
+                im.setAttribute("style", "width:100px", "height:100px");
+                content.appendChild(im);
+                document.body.appendChild(content);
+
+                for(var i=0; i<myObj.length;i++){
+                    
+                    let table = document.createElement("table");
+                    let riga = document.createElement("tr");
+                    let cella1 = document.createElement("td");
+                    let cella2 = document.createElement("td");
+                    let cella3 = document.createElement("td");
+                    let cella4 = document.createElement("td");
+
+                    cella1.innerHTML = myObj[i].nome;
+                    riga.appendChild(cella1);
+
+                    cella2.innerHTML = myObj[i].cognome;
+                    riga.appendChild(cella2);
+
+                    cella3.innerHTML = myObj[i].indirizzo;
+                    riga.appendChild(cella3);
+
+                    cella4.innerHTML = myObj[i].eta;
+                    riga.appendChild(cella4);
+
+                    table.appendChild(riga);
+                    document.body.appendChild(table);
+                }
+
+            }
+        }
+            xr.open("GET", id+".json", true);
+            xr.send();
+       
+        </script>
+    </head>
+<body>
+
+</body>
+</html>
