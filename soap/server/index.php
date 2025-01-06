@@ -1,12 +1,37 @@
-<?php
-//Server SOAP
-function sayHello($name){
-  // return "Ciao $name, sto funzionando come chiamata SOAP!";
-   $dollar = number_format($name*1.09, 2); 
-   $conv = "conversione euro-dollaro: " . $dollar;
-   return $conv; 
-}
-$server= new SoapServer("test.wsdl");
-$server->addFunction("sayHello");
-$server->handle();
-?>
+<?php
+
+//Server SOAP
+
+function sayHello($qty, $valuta){
+
+//$val=$_POST['val'];
+//$valuta=$_POST['valu'];
+
+$fileXML="http://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
+
+$xml = simplexml_load_file($fileXML);
+
+foreach($xml->Cube[0]->Cube[0]->Cube as $a)
+{
+    
+    switch((string) $a['currency']) { // Get attributes as element indices
+        case $valuta==$a['currency']:
+            $conv=($a['rate'][0])*$qty;
+            break;
+        case $valuta==$a['currency']:
+            $conv=($a['rate'][0])*$qty;
+            break;
+        }
+}
+   
+   return $conv; 
+
+}
+
+$server= new SoapServer("test.wsdl");
+
+$server->addFunction("sayHello");
+
+$server->handle();
+
+?>
