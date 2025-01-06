@@ -6,7 +6,8 @@
              xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
 
     <message name = "SayHelloRequest">
-        <part name = "firstName" type = "xsd:string"/>
+        <part name = "qty" type = "xsd:string"/>
+        <part name = "valuta" type = "xsd:string"/>
     </message>
 
     <message name = "SayHelloResponse">
@@ -44,7 +45,7 @@
     <service name = "Hello_Service">
         <documentation>Server</documentation>
         <port binding = "tns:Hello_Binding" name = "Hello_Port">
-            <soap:address location = "https://ppetrozzi.github.io/lavori/soap/server/test.wsdl" />
+            <soap:address location = "https://ppetrozzi.github.io/lavori/soap/server/" />
         </port>
     </service>
 </definitions>
