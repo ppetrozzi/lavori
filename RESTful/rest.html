@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+<script>
+var stringa="";
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+      for(var x in myObj){
+        stringa += "<tr><td>" + myObj[x].id + "</td><td> " + myObj[x].title.rendered + "</td></tr>";
+        document.getElementById("demo").innerHTML=stringa;
+      }
+  }
+};
+xmlhttp.open("GET", "https://seahawkmedia.com/wp-json/wp/v2/posts?search=Drupal ", true);
+xmlhttp.send();
+
+//https://www.desrparcosud.it/wp-json/wp/v2/posts?search=AMAP    
+// https://www.nytimes.com/wp-json/wp/v2/posts
+// https://staging.desrparcosud.it/wp-json/wp/v2/posts
+// http://127.0.0.1/wpvb/wordpress/wp-json/wp/v2/posts
+//https://staging.desrparcosud.it/wp-json/wp/v2/posts?search=AMAP
+// https://seahawkmedia.com/wp-json/wp/v2/posts?search=Drupal
+//https://www.whitehouse.gov/wp-json/wp/v2/posts
+
+
+
+</script>
+</head>
+
+<body>
+
+<table id="demo" class="table table-dark"></table></p>
+
+
+
+
+
+
+
+</body>
+</html>
