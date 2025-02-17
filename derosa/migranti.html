@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella CSV 2.0</title>
+    <style>
+        body {
+            background-color: #d3c0b4;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px #888;
+        }
+
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+            text-shadow: 1px 1px 3px #aaa;
+        }
+
+        input[type="file"] {
+            display: block;
+            margin: 20px auto;
+            padding: 10px;
+            border: 2px solid #28e9b9;
+            border-radius: 5px;
+            background-color: #fff;
+            color: #333;
+            font-size: 1em;
+        }
+
+        table {
+            margin: 20px auto;
+            width: 80%;
+            border-collapse: collapse;
+            background-color: #444;
+        }
+
+        th, td {
+            border: 2px solid #28e9b9;
+            padding: 10px;
+            text-align: left;
+            font-size: 1em;
+            color: white;
+        }
+
+        th {
+            background-color: #28e9b9;
+            color: black;
+        }
+
+        canvas {
+            display: block;
+            margin: 30px auto;
+            border: 2px solid #c0f012;
+            background-color: #ffffff;
+            box-shadow: 5px 5px 15px #999;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabella CSV (Migranti) 2.0</h1>
+    <p>Seleziona un file CSV da caricare:</p>
+    <input type="file" onchange="leggiFile(this)" accept=".csv">
+    <table id="tabellaCSV"></table>
+    <p>Grafico sbarchi dei migranti (1997-2020):</p>
+    <p><strong>Asse delle ordinate:</strong> Anni </p>
+    <p><strong>Asse delle asciesse:</strong> Numero</p>
+    <canvas id="Canvas" width="800" height="800"></canvas>
+    <script>
+const anni=[];
+        function leggiFile(input) {
+	
+            var file = input.files[0];
+            var reader = new FileReader();
+            reader.readAsText(file);
+
+            reader.onload = function () {
+                var dati = reader.result;
+                tabella(dati);
+            }  
+            reader.onerror = function () {
+                console.error("Errore lettura del file:", reader.error);
+            }
+            }
+           function tabella(dati) {
+                var righe = dati.split("\n");
+                var tabella = document.getElementById("tabellaCSV");
+                tabella.innerHTML = "";
+		
+                for (var i = 1; i < righe.length; i++) {
+                    var riga = righe[i].split(",");
+                    
+                    anni.push(riga[0].replace(/"/g,""));
+                    var tr = document.createElement("tr");
+
+                    for (var j = 0; j < riga.length; j++) {
+                        var cella;
+                        if (i === 0) {
+                            cella = document.createElement("th");
+                        } else {
+                            cella = document.createElement("td");
+                        }
+                        cella.textContent = riga[j].trim();
+                        tr.appendChild(cella);
+                    }
+                    tabella.appendChild(tr);
+                }             
+
+            
+            grafico(anni);
+        }; 
+
+        function grafico(anni){
+
+	    const stepX = 75;
+        var canvas = document.getElementById("Canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        ctx.moveTo(40, 10);
+        ctx.lineTo(40, 790);
+        ctx.moveTo(15, 770);
+        ctx.lineTo(790,770);
+        for(i=0;i<=anni.length;i++){
+            ctx.moveTo((i*30)+stepX, 770);
+	        ctx.lineTo((i*30)+stepX, 780);
+
+        }
+
+        ctx.stroke();
+
+        }
+
+    </script>
+</body>
+</html>
