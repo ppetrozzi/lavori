@@ -1,50 +1,23 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lavori Petrozzi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  </head>
-  <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-<center style="height:60px">
-  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasTop" aria-controls="offcanvasTop">Argomenti trattati dal corso di TPSIT del prof. Petrozzi</button>
-</center>
-<div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasTop" aria-labelledby="offcanvasTopLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasTopLabel">Corso di TPSIT</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <h2>Presentazione lavori didattici. I seguenti link rappresentano esempi di argomenti trattati a livello teorico e pratico</h2>
-  </div>
-</div>
- 
+<!DOCTYPE html>
 
-<ul class="list-group">
- <li><a href="angular" class="list-group-item">Angular</a></li>
- <li><a href="parametri/MittenteParametriTabella.html" class="list-group-item">Parametri</a></li>
- <li><a href="parametri/controllo_radiobutton.html" class="list-group-item">Radiobutton</a></li>
- <li><a href="dropdown/index.html" class="list-group-item">Combobox o drop-down</a></li>
- <li><a href="parametri/checkbox.html" class="list-group-item">Checkbox</a></li>
- <li><a href="listbox/list.html" class="list-group-item">Listbox</a></li>
- <li><a href="listbox/list2.html" class="list-group-item">inserimento dinamico listbox</a></li>
- <li><a href="download/index.html" class="list-group-item">download dinamico</a></li>
- <li><a href="javascript/tutorial_javascript.pdf" class="list-group-item">Tutorial javascript</a></li>
- <li><a href="HTML/pagina1.html" class="list-group-item">path</a></li>
- <li><a href="DIV" class="list-group-item">DIV</a></li>
- <li><a href="JSON" class="list-group-item">JSON</a></li>
- <li><a href="dom" class="list-group-item">DOM</a></li>
- <li><a href="covid-19" class="list-group-item">covid</a></li>
- <li><a href="geo" class="list-group-item">geo</a></li>
- <li><a href="CRM-CMS" class="list-group-item">CRM-CMS</a></li>
- <li><a href="xml" class="list-group-item">XML</a></li>
- <li><a href="soap" class="list-group-item">SOAP</a></li>
- <li><a href="RESTful" class="list-group-item">RESTful</a></li>
-</ul>
-    
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div style="margin-top:30px" class="container p-3 my-3 bg-primary text-white">
+    <form id="myForm">
+        <input type="file" id="csvFile" accept=".csv" class="btn btn-link"/>
+        
+        <input type="submit" value="Genera" class="btn btn-warning" style="margin-left:150px"/>
+    </form>
+    </div>
+    <div style="margin-top:30px; background-color: rgb(128, 213, 128);" class="container p-3 my-3 bg-primary text-white">Professione casuale:</div>
+    <div id="result" style="margin-top:30px" class="container p-3 my-3 bg-primary text-white"></div>
 
+    <script src="script.js"></script>
 </body>
 </html>
-
