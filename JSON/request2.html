@@ -1,57 +1,36 @@
 <!DOCTYPE html>
-
 <html>
+  <body>
+    <p id="demo"></p>
+    <script>
 
-<body>
+    let x=0;
+    let stampa="";
+    let xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "prova.json", true);
+    xmlhttp.send();
+    xmlhttp.onreadystatechange = function() {
 
+      if (this.readyState == 4 && this.status == 200) {
+          let myObj = JSON.parse(this.responseText);
 
+      for (y in myObj) {
+        stampa += "<h1>" + myObj[y].nome + "</h1><br>"
 
-<p id="demo"></p>
-
-
-
-<script>
-
-let x=0;
-
-let stampa="";
-
-let xmlhttp = new XMLHttpRequest();
-
-xmlhttp.open("GET", "prova.json", true);
-
-xmlhttp.send();
-
-xmlhttp.onreadystatechange = function() {
-
-  if (this.readyState == 4 && this.status == 200) {
-
-    let myObj = JSON.parse(this.responseText);
-
-    for (y in myObj) {
-    stampa += "<h1>" + myObj[y].nome + "</h1><br>"
-
-       for (x in myObj.auto) {
+         for (x in myObj.auto) {
            stampa +="<h3>" + myObj.auto[x].tipo + ": " + myObj.auto[x].nome + "</h3>";
 
-      }
-    }
-    document.getElementById("demo").innerHTML = stampa;
+          }
+        }
+        document.getElementById("demo").innerHTML = stampa;
 
-  }
+      }
 
 };
-
-
-
+  
 </script>
-
-
-
-
-
 </body>
-
 </html>
+
 
 
