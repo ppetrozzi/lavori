@@ -16,7 +16,18 @@
             { "tipo":"station wagon", "nome":"Volvo" }
           ]
     
+  },
+  {
+  "nome":"Matteo",
+  "età":54,
+  "auto": [
+            { "tipo":"spider", "nome":"Mercedes" },
+            { "tipo":"sportiva", "nome":"Lotus" },
+            { "tipo":"station wagon", "nome":"Volvo" }
+          ]
+    
   }
 ]
+
 
 
