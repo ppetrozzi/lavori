@@ -14,14 +14,14 @@
       if (this.readyState == 4 && this.status == 200) {
           let myObj = JSON.parse(this.responseText);
 
-      for (y in myObj) {
-        stampa += "<h1>" + myObj[y].nome + "</h1><br>"
+          for (y in myObj) {
+            stampa += "<h1>" + myObj[y].nome + "</h1>"
 
-         for (x in myObj.auto) {
-           stampa +="<h3>" + myObj.auto[x].tipo + ": " + myObj.auto[x].nome + "</h3>";
+             for (x in myObj.auto) {
+               stampa +="<h3>" + myObj.auto[x].tipo + ": " + myObj.auto[x].nome + "</h3>";
 
+            }
           }
-        }
         document.getElementById("demo").innerHTML = stampa;
 
       }
@@ -31,6 +31,7 @@
 </script>
 </body>
 </html>
+
 
 
 
