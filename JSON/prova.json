@@ -1,10 +1,22 @@
-{
-"nome":"Andrea",
-"età":22,
-"auto":[
-{ "tipo":"suv", "nome":"bmw" },
-{ "tipo":"coupè", "nome":"Fiat" },
-{ "tipo":"berlina", "nome":"Lancia" }
+[{
+  "nome":"Andrea",
+  "età":22,
+  "auto": [
+            { "tipo":"suv", "nome":"bmw" },
+            { "tipo":"coupè", "nome":"Fiat" },
+            { "tipo":"berlina", "nome":"Lancia" }
+          ]
+  },
+  {
+  "nome":"Luca",
+  "età":44,
+  "auto": [
+            { "tipo":"spider", "nome":"Mercedes" },
+            { "tipo":"sportiva", "nome":"Lotus" },
+            { "tipo":"station wagon", "nome":"Volvo" }
+          ]
+    
+  }
 ]
-}
+
 
