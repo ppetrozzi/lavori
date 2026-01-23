@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrafica 5.0</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anagrafica 4.0</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="a">
+        <div class="inputs">
+            <label for="nome">Nome</label><br>
+            <input type="text" id="nome" name="nome"><br>
+            <label for="cognome">Cognome</label><br>
+            <input type="text" id="cognome" name="cognome"><br>
+            <label for="sesso">Sesso</label><br>
+            <input type="radio" name="sesso" id="sesso" value="Maschio">
+            <label for="sesso">M</label><br>
+            <input type="radio" name="sesso" id="sesso" value="Femmina">
+            <label for="sesso">F</label><br>
+            <input type="radio" name="sesso" id="sesso" value="Altro">
+            <label for="sesso">Altro</label><br>
+            <label>Veicoli</label><br>
+            <input type="checkbox" name="veicolo1" id="veicolo1" value="Auto">
+            <label for="veicolo1">Auto</label><br>
+            <input type="checkbox" name="veicolo2" id="veicolo2" value="Moto">
+            <label for="veicolo2">Moto</label><br>
+            <input type="checkbox" name="veicolo3" id="veicolo3" value="Bici">
+            <label for="veicolo3">Bici</label><br>
+            <input type="checkbox" name="veicolo4" id="veicolo4" value="Cavallo">
+            <label for="veicolo4">Cavallo</label><br>
+            <input type="checkbox" name="veicolo5" id="veicolo5" value="Deltaplano">   
+            <label for="veicolo5">Deltaplano</label><br> 
+
+            <label for="indirizzo">Indirizzo</label><br>
+            <input type="text" id="indirizzo" name="indirizzo"><br>
+            <label for="citta">Città</label><br>
+            <input type="text" name="citta" id="citta"><br>
+            <label for="prov">Provincia</label><br>
+            <input list="prov" name="provincia" id="provincia"><br>
+            <datalist id="prov">
+                <option value="MI"></option>
+                <option value="VA"></option>
+                <option value="NA"></option>
+            </datalist>
+            <label for="cap">CAP</label><br>
+            <input type="text" name="cap" id="cap"><br>
+            <label for="eta">Data di nascita</label><br>
+            <input type="date" name="eta" id="eta"><br> 
+
+            <label for="materia">Materia preferita</label><br>
+            <select name="materia" id="materia">
+                <option value="non impostata">Seleziona materia</option>
+                <option value="Matematica">Matematica</option>
+                <option value="Italiano">Italiano</option>
+                <option value="TPS">TPS</option>
+                <option value="Educazione fisica">Educazione fisica</option>
+                <option value="Storia">Storia</option>
+                <option value="Informatica">Informatica</option>
+                <option value="Chimica">Chimica</option>
+                <option value="Sistemi e reti">Sistemi e reti</option>
+            </select><br> 
+            
+            <br><input class="subm" type="button" value="Stampa" onclick="funzione()">
+    <br><br>
+    <input type="button" value="Controlla dati" onclick="controllo()"><br><br>
+    <input type="button" value="Cancella dati" onclick="cancella()"><br><br>
+    <p id="asdf"></p>
+    <script src="script.js"></script>
+</body>
+</html>

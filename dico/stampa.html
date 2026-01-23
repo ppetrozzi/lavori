@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dati</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <table id="tabellas"> </table><br>
+    <input type="button" value="Indietro" onclick="window.location.href = './index.html'">
+    <script>
+        let tabella = document.getElementById("tabellas")
+        if(localStorage.length != 0){
+            let thead1 = document.createElement("th")
+            let thead2 = document.createElement("th")
+            let thead3 = document.createElement("th");
+            let thead4 = document.createElement("th"); 
+            let thead5 = document.createElement("th");
+            let thead6 = document.createElement("th");
+            let thead7 = document.createElement("th");
+            let thead8 = document.createElement("th");
+            let thead9 = document.createElement("th");
+            let thead10 = document.createElement("th");
+            let thead11 = document.createElement("th"); 
+            let thead12 = document.createElement("th");
+            thead1.innerHTML = "Nome"
+            thead2.innerHTML = "Cognome"
+            thead3.innerHTML = "Sesso"
+            thead4.innerHTML = "Veicoli"  
+            thead5.innerHTML = "Indirizzo"
+            thead6.innerHTML = "Città"
+            thead7.innerHTML = "Provincia"
+            thead8.innerHTML = "CAP"
+            thead9.innerHTML = "Età"
+            thead10.innerHTML = "Materia Preferita"
+            thead11.innerHTML = "Generazione" 
+            thead12.innerHTML = ""
+            tabella.appendChild(thead1)
+            tabella.appendChild(thead2)
+            tabella.appendChild(thead3)
+            tabella.appendChild(thead4) 
+            tabella.appendChild(thead5)
+            tabella.appendChild(thead12)
+            tabella.appendChild(thead6)
+            tabella.appendChild(thead7)
+            tabella.appendChild(thead8)
+            tabella.appendChild(thead9)
+            tabella.appendChild(thead10)
+            tabella.appendChild(thead11)
+            tabella.appendChild(thead12)
+        } 
+        
+        for (let i = 0; i < localStorage.length; i++) {
+            let persona = JSON.parse(localStorage.getItem("persona" + i.toString()));
+            let tr = document.createElement("tr");
+            let td1 = document.createElement("td");
+            let td2 = document.createElement("td");
+            let td3 = document.createElement("td");
+            let td4 = document.createElement("td"); 
+            let td5 = document.createElement("td");
+            let td6 = document.createElement("td");
+            let img = document.createElement("img")
+            let td7 = document.createElement("td");
+            let td8 = document.createElement("td");
+            let td9 = document.createElement("td");
+            let td10 = document.createElement("td");
+            let td11 = document.createElement("td"); 
+            let td12 = document.createElement("td");
+            td1.innerHTML = persona.nome;
+            td2.innerHTML = persona.cognome;
+            td3.innerHTML = persona.sesso;
+            td4.innerHTML = persona.veicoli; 
+            td5.innerHTML = persona.indirizzo;
+            td6.innerHTML = persona.citta;
+            td7.innerHTML = persona.provincia;
+            td8.innerHTML = persona.cap;
+            td9.innerHTML = persona.eta;
+            td10.innerHTML = persona.materia;
+            td11.innerHTML = persona.generazione; 
+            td12.innerHTML = "";
+            img.src = "cestino.jpg";
+            img.height = "20";
+            img.width = "20";
+            img.addEventListener('click', function() {cancella("persona" + i.toString())});
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4); 
+            tr.appendChild(td5);
+
+            tr.appendChild(td6);
+            tr.appendChild(td7);
+            tr.appendChild(td8);
+            tr.appendChild(td9);
+            tr.appendChild(td10);
+            tr.appendChild(td11); 
+            td12.appendChild(img)
+            tr.appendChild(td12);
+            tabella.appendChild(tr);
+        }
+
+        function cancella(prog) {
+
+            localStorage.removeItem(prog);
+            location.reload();       
+           
+        }
+        
+    </script>
+</body>
+</html>
