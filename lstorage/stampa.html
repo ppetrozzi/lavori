@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>localStorage</title>
+    </head>
+    <body>
+        <div id="cont"></div>
+        <script>
+            let par;
+            let co = document.getElementById("cont");
+            let s = JSON.parse(localStorage.getItem("elenco"));
+
+            for(i=0;i<s.length;i++){
+                par = document.createElement("p");
+                par.textContent = s[i].nome;
+                co.appendChild(par)
+            }
+
+        </script>
+
+    </body>
+</html>
