@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Lettura file CSV</title>
+</head>
+<body>
+
+  <h2>Carica file CSV</h2>
+
+  <input type="file" id="fileInput" accept=".csv">
+  <pre id="output"></pre>
+
+  <script>
+    const fileInput = document.getElementById("fileInput");
+    const output = document.getElementById("output");
+
+    fileInput.addEventListener("change", function () {
+      const file = this.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const testo = e.target.result;
+        const dati = parseCSV(testo);
+       //console.log(dati);
+       // output.textContent = dati;
+      };
+
+      reader.readAsText(file);
+    });
+
+    function parseCSV(testo) {
+      let i = 0;
+      const righe = testo.split("\n");
+      for(x in righe){
+      	output.textContent += `${x[i]}`;
+        i = +1;
+      }
+    }
+  </script>
+
+</body>
+</html>
