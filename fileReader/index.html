@@ -24,22 +24,22 @@
       reader.onload = function (e) {
         const testo = e.target.result;
         const dati = parseCSV(testo);
-       //console.log(dati);
-       // output.textContent = dati;
-      };
 
       reader.readAsText(file);
-    });
+      });
 
-    function parseCSV(testo) {
-      let i = 0;
-      const righe = testo.split("\n");
-      for(x in righe){
-      	output.textContent += `${x[i]}`;
-        i = +1;
-      }
-    }
+ 
+	function parseCSV(testo) { 
+
+    		const righe = testo.split("\n"); 
+
+        	for (var i = 0; i < righe.length; i++) {
+                   output.innerHTML+=righe[i].split(',')+"<br>";
+        	}
+	}
+
   </script>
 
 </body>
 </html>
+
