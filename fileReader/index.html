@@ -9,7 +9,7 @@
   <h2>Carica file CSV</h2>
 
  <input type="file" onchange="readFile(this)">
-<p id="vedi"></p>
+<p id="output"></p>
 
 <script>
 function readFile(input) {
@@ -30,12 +30,6 @@ function readFile(input) {
 
 }
 
-function stampa(testo) {
-  const righe = testo.split("\n"); 
-      for (var i = 0; i < righe.length; i++) {
-        document.getElementById("vedi").innerHTML += righe[i] + "<br>";
-      }
-}
  
 	function parseCSV(testo) { 
 
