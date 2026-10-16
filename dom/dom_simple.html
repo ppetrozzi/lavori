@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabella dinamica</title>
+</head>
+<body>
+
+  <h2>Gestione utenti</h2>
+
+  <input id="nome" type="text" placeholder="Nome">
+  <input id="eta" type="number" placeholder="Età">
+  <button onclick="aggiungiRiga()">Aggiungi</button>
+
+  <table id="tabella" border="1">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Età</th>
+      </tr>
+    </thead>
+    <tbody id="corpoTabella"></tbody>
+  </table>
+
+  <script>
+    function aggiungiRiga() {
+      const nome = document.getElementById("nome").value;
+      const eta = document.getElementById("eta").value;
+
+      if (nome === "" || eta === "") {
+        alert("Inserisci nome ed età");
+        return;
+      }
+
+      const tbody = document.getElementById("corpoTabella");
+
+      const riga = document.createElement("tr");
+
+      const cellaNome = document.createElement("td");
+
+      cellaNome.textContent = nome;
+
+      const cellaEta = document.createElement("td");
+
+      cellaEta.textContent = eta;
+
+      riga.append(cellaNome, cellaEta);
+
+      tbody.appendChild(riga);
+
+    }
+  </script>
+
+</body>
+</html>
